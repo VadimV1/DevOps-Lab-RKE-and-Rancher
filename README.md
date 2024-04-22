@@ -1,7 +1,7 @@
 # LAB2
 DevOps Lab - RKE and Rancher
 
-**<span style="text-decoration:underline;">1. Lab environment configurations:</span> **
+**<span style="text-decoration:underline;">1. Lab environment configurations:</span>**
 
 **VM 1:** **‘k8s-master@192.168.1.139’ -**
 
