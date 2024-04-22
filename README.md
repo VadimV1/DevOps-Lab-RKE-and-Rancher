@@ -5,15 +5,15 @@ DevOps Lab - RKE and Rancher
 
 **VM 1:** **‘k8s-master@192.168.1.139’ -**
 
-functions as the master/control node with the roles: **<code>controlplane </code></strong>and <strong>etcd.</strong>
+functions as the master/control node with the roles: **<code>controlplane** /strong>and <strong>etcd.</strong>
 
 **VM 2:** **‘k8s-worker1’@192.168.1.140’ -** 
 
-functions as the master/control node with the roles: <code>worker.</code></strong>
+functions as the master/control node with the roles: **worker**
 
 **VM 3:** **‘k8s-worker2‘@192.168.1.138‘ -** 
 
-functions as the master/control node with the roles: <code>worker.</code></strong>
+functions as the master/control node with the roles: **worker**
 
 **VM 4:** **‘rancher@192.168.1.144’ -**
 
