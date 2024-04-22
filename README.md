@@ -15,26 +15,26 @@ functions as the master/control node with the roles: **<code>worker.</code></str
 
 functions as the master/control node with the roles: **<code>worker.</code></strong>
 
-**VM 4:** **‘rancher@192.168.1.144’ - **
+**VM 4:** **‘rancher@192.168.1.144’ -**
 
 functions as a machine that deploys a container with **rancher UI **web app with **docker compose.**
 
-**VM 5: ‘DNS@192.168.1.143’ - **
+**VM 5: ‘DNS@192.168.1.143’ -**
 
 functions as a machine that is a local DNS server.
 
-**Host: ‘v.v@192.168.1.101’  - \
+**Host**: **‘v.v@192.168.1.101’**  - \
 **Personal computer that runs the 5 VM’s, has ‘**RKE**’ installed and ‘**kubectl’ **for the cluster configuration.
 
 **<span style="text-decoration:underline;">1.1. Deployment process of the VM’s:</span>**
 
 ***Note that I intended to use a local domain of ‘lab2.cloud’ for all of the machines for an easier involvement with them and as a practice to make the IPs static and change dns in the machines, so I installed PiHole on one of the machines to act as a local dns server for all of the machines to resolve the ip in the local network through it.**
 
-**1.1.1.** Deployment of the 4 VM’s consisted of  installing **Ubuntu 20.04** as their main os.
+**1.1.1.** Deployment of the 5 VM’s consisted of  installing **Ubuntu 20.04** as their main os.
 
 **1.1.2.** After finishing the installment process of the 4 VM’s, the procedure required the additional installment of ‘**vim**’, ‘**net-tools’**, ‘’**openssh-server’ **and enabling the ‘ssh’ process with ‘**systemctl enable ssh’**’.
 
-**1.1.3.** Proceeding on  **‘v.v@v.v‘ **and making an SSH key for distribution across the 4 VM’s with the ‘**ssh-keygen**’ command.
+**1.1.3.** Proceeding on  **‘v.v@192.168.1.101** and making an SSH key for distribution across the 4 VM’s with the ‘**ssh-keygen**’ command.
 
 **1.1.4.** In precedence to the previous step, commence distribution of the ssh key across the 4 VM’s with the ‘**ssh-copy-id**’ command.
 
@@ -48,7 +48,7 @@ functions as a machine that is a local DNS server.
 
 **<span style="text-decoration:underline;">2. Creation of the cluster:</span>**
 
-**2.1.** Installation of **‘RKE’ on ‘v.v@v.v’**, giving it exec property and** **adding it to the ‘**$PATH’ **variable.
+**2.1.** Installation of **‘RKE’ on ‘v.v@192.168.1.101**, giving it exec property and** **adding it to the ‘**$PATH’ **variable.
 
 **Url:** [RKE installation guide](https://github.com/rancher/rke)
 
@@ -56,7 +56,7 @@ functions as a machine that is a local DNS server.
 
 **Url:** [kubectl installation guide](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management) 
 
-**2.3.** Creation of a directory for the Cluster config files on **‘v.v@v.v’.**
+**2.3.** Creation of a directory for the Cluster config files on **‘v.v@192.168.1.101’.**
 
 **2.4.** Creation of** ‘cluster.yml’ **file** **for** ‘RKE’**.
 
