@@ -1,0 +1,30 @@
+nodes:
+  - address: 192.168.1.139
+    user: k8s-master
+    role:
+      - controlplane
+      - etcd
+
+  - address: 192.168.1.138
+    user: k8s-worker2
+    role:
+      - worker
+
+  - address: 192.168.1.140
+    user: k8s-worker1
+    role:
+      - worker
+
+services:
+  etcd:
+    snapshot: true
+    creation: 6h
+    retention: 24h
+    
+dns:
+  provider: kube-dns
+  upstreamnameservers:
+  - 192.168.1.143
+  - 8.8.8.8
+  - 8.8.4.4
+
