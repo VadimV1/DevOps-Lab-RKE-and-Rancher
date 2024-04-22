@@ -9,15 +9,15 @@ functions as the master/control node with the roles: **<code>controlplane </code
 
 **VM 2:** **‘k8s-worker1’@192.168.1.140’ -** 
 
-functions as the master/control node with the roles: **<code>worker.</code></strong>
+functions as the master/control node with the roles: <code>worker.</code></strong>
 
 **VM 3:** **‘k8s-worker2‘@192.168.1.138‘ -** 
 
-functions as the master/control node with the roles: **<code>worker.</code></strong>
+functions as the master/control node with the roles: <code>worker.</code></strong>
 
 **VM 4:** **‘rancher@192.168.1.144’ -**
 
-functions as a machine that deploys a container with **rancher UI **web app with **docker compose.**
+functions as a machine that deploys a container with **rancher UI** web app with **docker compose.**
 
 **VM 5: ‘DNS@192.168.1.143’ -**
 
