@@ -24,7 +24,7 @@ functions as a machine that deploys a container with **rancher UI** web app with
 functions as a machine that is a local DNS server.
 
 **Host**: **‘v.v@192.168.1.101’**  - \
-**Personal computer that runs the 5 VM’s, has ‘**RKE**’ installed and ‘**kubectl’ **for the cluster configuration.
+Personal computer that runs the 5 VM’s, has ‘**RKE**’ installed and ‘**kubectl’** for the cluster configuration.
 
 **<span style="text-decoration:underline;">1.1. Deployment process of the VM’s:</span>**
 
