@@ -1,4 +1,4 @@
-# LAB2
+# DevOps LAB2
 DevOps Lab - RKE and Rancher
 
 **<span style="text-decoration:underline;">1. Lab environment configurations:</span>**
