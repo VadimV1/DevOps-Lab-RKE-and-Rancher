@@ -1,0 +1,26 @@
+# Default values for webapp-deployment.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+namespace:
+  name: dev
+  
+replicaCount: 1
+
+image:
+  repository: vadimv1337/webapp
+  pullPolicy: Always
+  tag: "1.0"
+
+service:
+  type: NodePort
+  targetPort: 3000
+  port: 3000
+
+ingress:
+  enabled: true
+  name: webapp-ingress
+  host: k8s.lab2.cloud
+  path: /
+  pathType: Prefix
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
