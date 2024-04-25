@@ -32,7 +32,7 @@ Personal computer that runs the 5 VM’s, has ‘**RKE**’ installed and ‘**k
 
 **1.1.1.** Deployment of the 5 VM’s consisted of  installing **Ubuntu 20.04** as their main os.
 
-**1.1.2.** After finishing the installment process of the 4 VM’s, the procedure required the additional installment of ‘**vim**’, ‘**net-tools’**, ‘’**openssh-server’ **and enabling the ‘ssh’ process with ‘**systemctl enable ssh’**’.
+**1.1.2.** After finishing the installment process of the 4 VM’s, the procedure required the additional installment of ‘**vim**’, ‘**net-tools’**, ’**openssh-server**’ and enabling the ‘ssh’ process with ‘**systemctl enable ssh**’.
 
 **1.1.3.** Proceeding on  **‘v.v@192.168.1.101** and making an SSH key for distribution across the 4 VM’s with the ‘**ssh-keygen**’ command.
 
@@ -48,7 +48,7 @@ Personal computer that runs the 5 VM’s, has ‘**RKE**’ installed and ‘**k
 
 **<span style="text-decoration:underline;">2. Creation of the cluster:</span>**
 
-**2.1.** Installation of **‘RKE’ on ‘v.v@192.168.1.101**, giving it exec property and** **adding it to the ‘**$PATH’ **variable.
+**2.1.** Installation of **‘RKE’** on **‘v.v@192.168.1.101**, giving it exec property and adding it to the ‘**$PATH**’ variable.
 
 **Url:** [RKE installation guide](https://github.com/rancher/rke)
 
@@ -58,11 +58,9 @@ Personal computer that runs the 5 VM’s, has ‘**RKE**’ installed and ‘**k
 
 **2.3.** Creation of a directory for the Cluster config files on **‘v.v@192.168.1.101’.**
 
-**2.4.** Creation of** ‘cluster.yml’ **file** **for** ‘RKE’**.
+**2.4.** Creation of **‘cluster.yml’** file for ‘**RKE**’.
 
-**   **
-
-**2.5.** Deployment of the cluster with** ‘rke up –config cluster.yml’ **command.
+**2.5.** Deployment of the cluster with ‘**rke up –config cluster.yml**’ command.
 
 **2.6.** Proceeding to copy the ‘**kube_config_cluster.yml**’ file that was created after **‘RKE’ **runtime** **into the /.kube directory.
 
