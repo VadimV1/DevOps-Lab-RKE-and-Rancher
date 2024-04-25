@@ -158,4 +158,4 @@ Personal computer that runs the 5 VM’s, has ‘**RKE**’, ‘**Helm3**’, in
 
 **5.4.** Run the following command from the deployment machine ‘**rke etcd snapshot-restore --config cluster.yml --name lab2-snap1**’ the process should take 2 to 3 minutes to complete.
 
-**5.5.** After **step 5.4** is done, you should see that the** **webapp** in **step 4.3** is accessible again in the browser and after a minute the cluster in the **Rancher UI** should be updated again with  ‘**Active**’ status and displaying its resources and statistics again. 
+**5.5.** After **step 5.4** is done, you should see that the webapp in **step 4.3** is accessible again in the browser and after a minute the cluster in the **Rancher UI** should be updated again with  ‘**Active**’ status and displaying its resources and statistics again. 
