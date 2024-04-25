@@ -52,7 +52,7 @@ Personal computer that runs the 5 VM’s, has ‘**RKE**’ installed and ‘**k
 
 **Url:** [RKE installation guide](https://github.com/rancher/rke)
 
-**2.2.** Installation of **‘kubectl’** on **‘v.v@v.v’**, giving it exec property and** **adding it to the ‘**$PATH’ **variable.
+**2.2.** Installation of **‘kubectl’** on **‘v.v@192.168.1.101’**, giving it exec property and adding it to the ‘**$PATH**’ variable.
 
 **Url:** [kubectl installation guide](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management) 
 
@@ -62,9 +62,9 @@ Personal computer that runs the 5 VM’s, has ‘**RKE**’ installed and ‘**k
 
 **2.5.** Deployment of the cluster with ‘**rke up –config cluster.yml**’ command.
 
-**2.6.** Proceeding to copy the ‘**kube_config_cluster.yml**’ file that was created after **‘RKE’ **runtime** **into the /.kube directory.
+**2.6.** Proceeding to copy the ‘**kube_config_cluster.yml**’ file that was created after ‘**RKE**’ runtime into the /.kube directory.
 
-**2.7.** Running the **‘kubectl get nodes’ **command to see that all of the 3 nodes in the cluster are at** ‘READY’ **state.
+**2.7.** Running the **‘kubectl get nodes’ command to see that all of the 3 nodes in the cluster are at** ‘**READY**’ state.
 
 **<span style="text-decoration:underline;">3. ‘Rancher’ with ‘Docker Compose’</span>**
 
