@@ -92,7 +92,7 @@ Personal computer that runs the 5 VM’s, has ‘**RKE**’ installed and ‘**k
 
 **3.1.1.4.** Transfer the files from **3.1.1.2** into the certificate folder
 
-**3.1.1.5.** Specify the certificate folder inside the **docker compose yml file as volume and bind it into ‘**/etc/rancher/ssl**” in the docker for more information about how to assign certificates into “Racher” that is deployed with **docker compose** check: [Check how to configure SSL on Rancher](https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker#option-b-bring-your-own-certificate-self-signed)
+**3.1.1.5.** Specify the certificate folder inside the **docker compose yml** file as volume and bind it into ‘**/etc/rancher/ssl**‘ in the docker for more information about how to assign certificates into “Racher” that is deployed with **docker compose** check: [Check how to configure SSL on Rancher](https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker#option-b-bring-your-own-certificate-self-signed)
 
 **3.1.1.5.** Add ‘**cacerts.pem**’/‘**rootCA.crt**’ to your browser, so that the browser will trust the Rancher UI app that will run with the self-signed SSL certificates.
 
