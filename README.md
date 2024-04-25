@@ -126,27 +126,27 @@ Personal computer that runs the 5 VM’s, has ‘**RKE**’, ‘**Helm3**’, in
 
 **4.2.3.** Create a Dockerfile that will deploy the node.js image, then install the npm dependencies and run the web-app.
 
-**4.2.4.** Run** ‘docker build -t webapp:1.0 .’ **to create an Image for the web-app.
+**4.2.4.** Run ‘**docker build -t webapp:1.0 .*’ *to create an Image for the web-app.
 
-**4.2.5.** Upload the** ‘webapp:1.0’ **to the docker **‘Docker Hub’ **repository(my account) with the ‘**docker image push**’ command (also making sure that the image be downloaded publicly).
+**4.2.5.** Upload the ‘**webapp:1.0**’ to the docker ‘**Docker Hub**’ repository(my account) with the ‘**docker image push**’ command (also making sure that the image cab be downloaded publicly).
 
-**<span style="text-decoration:underline;">4.3 Creation of k8s deployment file for the ‘webapp:1.0’ image:</span>**
+**<span style="text-decoration:underline;">4.3 Creation of a 'Helm Chart' for the ‘webapp:1.0’ image:</span>**
 
-**4.3.1.** Firstly I chose to create a new namespace through the yml configuration file and not do it manually with the ‘**kubectl create namespace**’ command.
+**4.3.1.** Run the command '**helm create webapp_helmChart**' in the root directory of **‘v.v@192.168.1.101’** to create a the default premade helm chart.
 
-**4.3.2.** Continuing with** **the deployment of the image itself in a new yml segment inside the yml configuration file and specifying the relevant image from docker hub and exposing the 3000 port inside the pod.
+**4.3.2.** Continuing with editing the '**deployment.yaml**' file in the '**templates**' folder inside '**webapp_helmChart**' to include the docker image for the relevant webapp and the basic configurations for it.
 
-**4.3.3.** Then declaring a new segment for a service named **‘webapp-service’ **and binding the** ‘targetport’ **to 3000 for the pod that will run the web-app image and binding the incoming traffic to that service on port 3000.
+**4.3.3.** Edit the '**service.yaml**' file to configure a new service and configure the both of the ports to be on **port 3000** and use the '**nodePort**' type for local debugging just in case.
 
-**4.3.4.** Lastly, declaring a new Ingress and configuring it to work with the ‘**webapp-service**’ and redirect traffic to port 3000 of the service.
-
- 
+**4.3.4.** Lastly, Edit the '**ingress.yaml**' file configuring it to work with the ‘**webapp-service**’ and redirect traffic to port 3000 of the service.
 
 **<span style="text-decoration:underline;">4.4 Deployment of the webapp:</span>**
 
-**4.4.1.** Run the** ‘kubectl apply -f’ **command on the relevant yml configuration that was created.
+**4.4.1.** Run the ‘**kubectl create ns dev**’ command to create a new namespace named dev.
 
-**4.4.2.** The deployment should be successful, then enter ‘**k8s.lab2.cloud**’ address (any local IP address of a machine in the cluster) to see that app deployed and to see ‘Task Completed!’ in red.
+**4.4.2.** Run the '**helm install webapp ./webapp_helmChart**'.
+
+**4.4.3.** The deployment should be succesful and you should see the deployment through '**helm list**'.
 
 **<span style="text-decoration:underline;">5. Restoration of the cluster with the ‘Snapshot’ function of RKE:</span>**
 
