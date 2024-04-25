@@ -24,7 +24,7 @@ functions as a machine that deploys a container with **rancher UI** web app with
 functions as a machine that is a local DNS server.
 
 **Host**: **‘v.v@192.168.1.101’**  - \
-Personal computer that runs the 5 VM’s, has ‘**RKE**’ installed and ‘**kubectl’** for the cluster configuration.
+Personal computer that runs the 5 VM’s, has ‘**RKE**’, ‘**Helm3**’, installed and ‘**kubectl’** for the cluster configuration.
 
 **<span style="text-decoration:underline;">1.1. Deployment process of the VM’s:</span>**
 
@@ -114,9 +114,9 @@ Personal computer that runs the 5 VM’s, has ‘**RKE**’ installed and ‘**k
 
 **<span style="text-decoration:underline;">4. Deploying an application to the ‘lab2’ existing cluster:</span>**
 
-***Note that the RKE preinstalls/deploys the NGINX ingress controller by default so I didnt deploy an ingress controller of any kind manually.**
+**4.1.1.** Installation of Helm3 on **‘v.v@192.168.1.101’**, then deployment machine, using the [Helm official documentation](https://helm.sh/docs/intro/install/).
 
-***TODO add helm chart just for referance**
+***Note that the RKE preinstalls/deploys the NGINX ingress controller by default so I didnt deploy an ingress controller of any kind manually, but for installing the ngninx ingress controller on the cluster, make sure the desired cluster is in the default config path, or specify the desired cluster config with helm an them follow the quick [installlation steps for nginx ingress controller](https://artifacthub.io/packages/helm/ingress-nginx/ingress-nginx)**
 
 **<span style="text-decoration:underline;">4.1 Creation of the web app Docker Image:</span>**
 
