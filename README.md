@@ -126,7 +126,7 @@ Personal computer that runs the 5 VM’s, has ‘**RKE**’, ‘**Helm3**’, in
 
 **4.2.3.** Create a Dockerfile that will deploy the node.js image, then install the npm dependencies and run the web-app.
 
-**4.2.4.** Run ‘**docker build -t webapp:1.0 .*’ *to create an Image for the web-app.
+**4.2.4.** Run ‘**docker build -t webapp:1.0 .**’ *to create an Image for the web-app.
 
 **4.2.5.** Upload the ‘**webapp:1.0**’ to the docker ‘**Docker Hub**’ repository(my account) with the ‘**docker image push**’ command (also making sure that the image cab be downloaded publicly).
 
