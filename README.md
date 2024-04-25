@@ -150,12 +150,12 @@ Personal computer that runs the 5 VM’s, has ‘**RKE**’, ‘**Helm3**’, in
 
 **<span style="text-decoration:underline;">5. Restoration of the cluster with the ‘Snapshot’ function of RKE:</span>**
 
-**5.1.** Run the following command from the deployment machine** ‘rke etcd snapshot-save --config cluster.yml --name lab2-snap1’ **the process should take a minute and save a zip file containing the snapshot in the machines/node that are running ‘**etcd**’.
+**5.1.** Run the following command from the deployment machine ‘**rke etcd snapshot-save --config cluster.yml --name lab2-snap1**’ the process should take a minute and save a zip file containing the snapshot in the machines/node that are running ‘**etcd**’.
 
-**5.2.** Run the following command ‘**rke remove --config cluster.yml’ **to destroy the cluster. 
+**5.2.** Run the following command ‘**rke remove --config cluster.yml**’ to destroy the cluster. 
 
-**5.3.** Making sure that the process of destruction was successful with trying to connect to the webapp of **step 4.3 **and seeing an error that the address isn't reachable, also check the Rancher UI to see that there is a problem with data/statistics from the cluster.
+**5.3.** Making sure that the process of destruction was successful with trying to connect to the webapp of **step 4.3** and seeing an error that the address isn't reachable, also check the **Rancher UI** to see that there is a problem with data/statistics from the cluster.
 
-**5.4.** Run the following command from the deployment machine** ‘rke etcd snapshot-restore --config cluster.yml --name lab2-snap1’ **the process should take 2 to 3 minutes to complete.
+**5.4.** Run the following command from the deployment machine ‘**rke etcd snapshot-restore --config cluster.yml --name lab2-snap1**’ the process should take 2 to 3 minutes to complete.
 
-**5.5.** After** step 5.4 **is done, you should see that the** **webapp in** step 4.3 **is accessible again in the browser and after a minute the cluster in the Rancher UI should be updated again with  ‘Active’ status and displaying its resources and statistics again. 
+**5.5.** After **step 5.4** is done, you should see that the** **webapp** in **step 4.3** is accessible again in the browser and after a minute the cluster in the **Rancher UI** should be updated again with  ‘**Active**’ status and displaying its resources and statistics again. 
