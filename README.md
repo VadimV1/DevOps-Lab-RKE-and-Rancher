@@ -114,39 +114,39 @@ Personal computer that runs the 5 VM’s, has ‘**RKE**’, ‘**Helm3**’, in
 
 **<span style="text-decoration:underline;">4. Deploying an application to the ‘lab2’ existing cluster:</span>**
 
-**4.1.1.** Installation of Helm3 on **‘v.v@192.168.1.101’**, then deployment machine, using the [Helm official documentation](https://helm.sh/docs/intro/install/).
+**4.1.** Installation of Helm3 on **‘v.v@192.168.1.101’**, the deployment machine, using the [Helm official documentation](https://helm.sh/docs/intro/install/).
 
 ***Note that the RKE preinstalls/deploys the NGINX ingress controller by default so I didnt deploy an ingress controller of any kind manually, but for installing the ngninx ingress controller on the cluster, make sure the desired cluster is in the default config path, or specify the desired cluster config with helm an them follow the quick [installlation steps for nginx ingress controller](https://artifacthub.io/packages/helm/ingress-nginx/ingress-nginx)**
 
-**<span style="text-decoration:underline;">4.1 Creation of the web app Docker Image:</span>**
+**<span style="text-decoration:underline;">4.2 Creation of the web app Docker Image:</span>**
 
-**4.1.1.** Make a folder for the web app.
+**4.2.1.** Make a folder for the web app.
 
-**4.1.2.** Create a simple web app using JavaScript and html to be intended yo use with node.js and listen on port 3000.
+**4.2.2.** Create a simple web app using JavaScript and html to be intended yo use with node.js and listen on port 3000.
 
-**4.1.3.** Create a Dockerfile that will deploy the node.js image, then install the npm dependencies and run the web-app.
+**4.2.3.** Create a Dockerfile that will deploy the node.js image, then install the npm dependencies and run the web-app.
 
-**4.1.4.** Run** ‘docker build -t webapp:1.0 .’ **to create an Image for the web-app.
+**4.2.4.** Run** ‘docker build -t webapp:1.0 .’ **to create an Image for the web-app.
 
-**4.1.5.** Upload the** ‘webapp:1.0’ **to the docker **‘Docker Hub’ **repository(my account) with the ‘**docker image push**’ command (also making sure that the image be downloaded publicly).
+**4.2.5.** Upload the** ‘webapp:1.0’ **to the docker **‘Docker Hub’ **repository(my account) with the ‘**docker image push**’ command (also making sure that the image be downloaded publicly).
 
-**<span style="text-decoration:underline;">4.2 Creation of k8s deployment file for the ‘webapp:1.0’ image:</span>**
+**<span style="text-decoration:underline;">4.3 Creation of k8s deployment file for the ‘webapp:1.0’ image:</span>**
 
-**4.2.1.** Firstly I chose to create a new namespace through the yml configuration file and not do it manually with the ‘**kubectl create namespace**’ command.
+**4.3.1.** Firstly I chose to create a new namespace through the yml configuration file and not do it manually with the ‘**kubectl create namespace**’ command.
 
-**4.2.2.** Continuing with** **the deployment of the image itself in a new yml segment inside the yml configuration file and specifying the relevant image from docker hub and exposing the 3000 port inside the pod.
+**4.3.2.** Continuing with** **the deployment of the image itself in a new yml segment inside the yml configuration file and specifying the relevant image from docker hub and exposing the 3000 port inside the pod.
 
-**4.2.3.** Then declaring a new segment for a service named **‘webapp-service’ **and binding the** ‘targetport’ **to 3000 for the pod that will run the web-app image and binding the incoming traffic to that service on port 3000.
+**4.3.3.** Then declaring a new segment for a service named **‘webapp-service’ **and binding the** ‘targetport’ **to 3000 for the pod that will run the web-app image and binding the incoming traffic to that service on port 3000.
 
-**4.2.4.** Lastly, declaring a new Ingress and configuring it to work with the ‘**webapp-service**’ and redirect traffic to port 3000 of the service.
+**4.3.4.** Lastly, declaring a new Ingress and configuring it to work with the ‘**webapp-service**’ and redirect traffic to port 3000 of the service.
 
  
 
-**<span style="text-decoration:underline;">4.3 Deployment of the webapp:</span>**
+**<span style="text-decoration:underline;">4.4 Deployment of the webapp:</span>**
 
-**4.3.1.** Run the** ‘kubectl apply -f’ **command on the relevant yml configuration that was created.
+**4.4.1.** Run the** ‘kubectl apply -f’ **command on the relevant yml configuration that was created.
 
-**4.3.2.** The deployment should be successful, then enter ‘**k8s.lab2.cloud**’ address (any local IP address of a machine in the cluster) to see that app deployed and to see ‘Task Completed!’ in red.
+**4.4.2.** The deployment should be successful, then enter ‘**k8s.lab2.cloud**’ address (any local IP address of a machine in the cluster) to see that app deployed and to see ‘Task Completed!’ in red.
 
 **<span style="text-decoration:underline;">5. Restoration of the cluster with the ‘Snapshot’ function of RKE:</span>**
 
