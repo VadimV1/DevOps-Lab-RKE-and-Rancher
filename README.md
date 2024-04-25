@@ -52,7 +52,7 @@ Personal computer that runs the 5 VM’s, has ‘**RKE**’ installed and ‘**k
 
 **Url:** [RKE installation guide](https://github.com/rancher/rke)
 
-**2.2.** Installment of **‘kubectl’ on ‘v.v@v.v’**, giving it exec property and** **adding it to the ‘**$PATH’ **variable.
+**2.2.** Installation of **‘kubectl’** on **‘v.v@v.v’**, giving it exec property and** **adding it to the ‘**$PATH’ **variable.
 
 **Url:** [kubectl installation guide](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management) 
 
