@@ -64,7 +64,7 @@ Personal computer that runs the 5 VM’s, has ‘**RKE**’ installed and ‘**k
 
 **2.6.** Proceeding to copy the ‘**kube_config_cluster.yml**’ file that was created after ‘**RKE**’ runtime into the /.kube directory.
 
-**2.7.** Running the **‘kubectl get nodes’ command to see that all of the 3 nodes in the cluster are at** ‘**READY**’ state.
+**2.7.** Running the **‘kubectl get nodes**’ command to see that all of the 3 nodes in the cluster are at ‘**READY**’ state.
 
 **<span style="text-decoration:underline;">3. ‘Rancher’ with ‘Docker Compose’</span>**
 
@@ -72,7 +72,7 @@ Personal computer that runs the 5 VM’s, has ‘**RKE**’ installed and ‘**k
 
 **3.1.1.** Creation of a directory for the ‘docker compose’ yml file and files for ‘Rancher’ docker (i.e “Rancer”).
 
-**3.1.2.** Creation of** ‘docker-compose.yml’ **file** **for** ‘Docker Compose’.**
+**3.1.2.** Creation of ‘**docker-compose.yml**’ file for ‘**Docker Compose**’.
 
 **<span style="text-decoration:underline;">3.1.1. Creation of self-signed SSL certificates with OpenSSl</span>**
 
@@ -80,27 +80,27 @@ Personal computer that runs the 5 VM’s, has ‘**RKE**’ installed and ‘**k
 
 **3.1.1.2.** After the creation of the files, rename the files:
 
-‘**rootCA.crt’ **to** ‘’cacerts.pem’**
+‘**rootCA.crt’ to ‘’cacerts.pem’**
 
-**‘“Domain.crt”’ **to** “cert.pem’**
+**‘“Domain.crt”’ to “cert.pem’**
 
-**‘“Domain.key”’ **to** “key.pem’**
+**‘“Domain.key”’ to “key.pem’**
 
 ***note that the original files are already encoded in pem format we just need the exact string format of the names to work with rancher through docker compose**
 
 **3.1.1.3.** Create a folder (i.e ‘certs’) in the “Rancher” folder
 
-**3.1.1.4.** Transfer the files from **3.1.1.2 **into the certificate folder
+**3.1.1.4.** Transfer the files from **3.1.1.2** into the certificate folder
 
-**3.1.1.5.** Specify the certificate folder inside the **docker compose yml **file as volume and bind it into ‘**/etc/rancher/ssl**” in the docker for more information about how to assign certificates into “Racher” that is deployed with **docker compose **check: [Check how to configure SSL on Rancher](https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker#option-b-bring-your-own-certificate-self-signed)
+**3.1.1.5.** Specify the certificate folder inside the **docker compose yml file as volume and bind it into ‘**/etc/rancher/ssl**” in the docker for more information about how to assign certificates into “Racher” that is deployed with **docker compose** check: [Check how to configure SSL on Rancher](https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker#option-b-bring-your-own-certificate-self-signed)
 
-**3.1.1.5.** Add**  ‘’cacerts.pem’/**‘**rootCA.crt’ **to your browser, so that the browser will trust the Rancher UI app that will  run with the self-signed SSL certificates.
+**3.1.1.5.** Add ‘**cacerts.pem**’/‘**rootCA.crt**’ to your browser, so that the browser will trust the Rancher UI app that will run with the self-signed SSL certificates.
 
 ***Note that the same process would be that same for acquiring through a trusted/real CA you just would not need to add ‘’cacerts.pem’ in step 3.1.1.2. Into the docker filesystem.**
 
 **3.1.3.** Running the ‘**docker compose up -d**’ command to deploy the container with **‘Rancher’**
 
-**3.1.4.** After the successful deployment of **‘Docker Compose’ **with **‘Rancher’ **on it enter the site with domain name that you have binded to the docker net driver’s ip, you should see a green lock meaning the web app is trusted and follow the specified steps to make the initial login into the app, using the docker logs of the rancher deployment for the password.
+**3.1.4.** After the successful deployment of ‘**Docker Compose**’ with ‘**Rancher**’ on it enter the site with domain name that you have binded to the docker net driver’s ip, you should see a green lock meaning the web app is trusted and follow the specified steps to make the initial login into the app, using the docker logs of the rancher deployment for the password.
 
 **<span style="text-decoration:underline;">3.2. Adding an existing RKE cluster to the ‘Rancher UI’ web app:</span>**
 
