@@ -144,7 +144,7 @@ Personal computer that runs the 5 VM’s, has ‘**RKE**’, ‘**Helm3**’, in
 
 **4.4.1.** Run the ‘**kubectl create ns dev**’ command to create a new namespace named dev.
 
-**4.4.2.** Run the '**helm install webapp ./webapp_helmChart**'.
+**4.4.2.** Run the '**helm install webapp ./webapp_helmChart** -n dev' command.
 
 **4.4.3.** The deployment should be succesful and you should see the deployment through '**helm list**'.
 
