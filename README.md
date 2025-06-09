@@ -1,5 +1,10 @@
 # DevOps LAB2
 DevOps Lab - RKE and Rancher
+Project Key Notes:
+
+1. Provisioning a Kubernetes cluster with RKE that runs a containerized 'NodeJS' fronted service with SSL certificates using HELM charts.
+
+2. Deploying a containerized 'Rancher Dashboard' web-app UI for monitoring the provisioned RKE cluster with secure connection to the web-page using SSL certificates using docker compose and creating a local DNS server for resolving host names.
 
 **<span style="text-decoration:underline;">1. Lab environment configurations:</span>**
 
